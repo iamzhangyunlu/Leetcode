@@ -36,12 +36,12 @@ class Solution:
             s += str(l)
         s = int(s)
         if count != len(str(x)):
-            if -2147483648 <= -s <= 2147483647:
+            if -2 ** 31 <= -s <= 2 ** 31 - 1:
                 return -s
             else:
                 return 0
         else:
-            if -2147483648 <= s <= 2147483647:
+            if -2 ** 31 <= -s <= 2 ** 31 - 1:
                 return s
             else:
                 return 0
