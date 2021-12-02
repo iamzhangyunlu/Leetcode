@@ -45,3 +45,19 @@ class Solution:
                 return s
             else:
                 return 0
+
+
+# 简写方法
+
+
+class Solution2:
+    def reverse(self, x: int) -> int:
+        # 先设置正负号的flag
+        flag = 1 if x > 0 else -1
+        # 通过字符串反转，与第一种方法其实是一样的，字符串反转可通过[::-1]或reverse()函数
+        result = flag * int(str(abs(x))[::-1])
+        # 最终结果的绝对值如果大于题目给定的边界值，则返回0
+        if abs(result) > 2 ** 31:
+            return 0
+        # 否则返回1
+        return result
